@@ -1,0 +1,19 @@
+{% include "layouts/base.html" %}
+{% block content %}
+    {% if factura.tipoDeTransaccion == 'VENTA' %}
+        <h1>Creando Nueva venta</h1>
+        <h4>N.Factura: {{factura.id_factura}}</h4>
+        <h4>Fecha: {{factura.fecha}}</h4>
+        <div class="boton">
+            <a href="{% url 'crear_transaccion' factura %}">Agregar venta</a>
+        </div>
+    {% elif factura.tipoDeTransaccion == 'COMPRA' %}
+        <h1>Creando Nueva Compra</h1>
+        <h4>N.Factura: {{factura.id_factura}}</h4>
+        <h4>Fecha: {{factura.fecha}}</h4>
+        <div class="boton">
+            <a href="{% url 'crear_transaccion' factura %}">Agregar Compra</a>
+        </div>
+    {% endif %}
+
+{% endblock %}

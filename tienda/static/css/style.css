@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background: #8ecae6;   
+    text-align: center; 
+}
+body::-webkit-scrollbar{
+    width: 9px;
+    background: #8ecae6;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #023047;
+    border-radius: 0px;
+    
+}
+.navbar{
+    background: #023047;
+    padding: 10px 15px;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;
+}
+#inicio{
+    color: #ffb703;
+    font-weight: 600;
+}
+.navbar ul li a{
+    color: #ffb703;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.navbar ul li a:hover{
+    color: #FB8500;
+} 
+h1{
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #023047;
+}
+.boton{
+    display: inline-block;
+    background: #ffb703;
+    border-radius: 5px;
+}
+.boton a{
+    color: #023047;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.tabla{
+    margin: 40px auto;
+} 
+thead tr th,
+tbody tr td{
+    padding: 15px 15px;
+    background-color: #023047;
+    border-radius: 5px;
+    color: #ffb703;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+tbody tr td{
+    background-color: #219EBC;
+    color: #023047;
+    padding: 12px 12px;
+}
+.mg{
+    margin-bottom: 100px;
+}
+
+h4{
+    display: inline-block;
+    margin: 50px 50px;
+    font-size: 1.2rem;
+}
+
+form{
+    display: block;
+    max-width: 500px;
+    margin: 40px auto;
+}
+form label{
+    display: block;
+}
+form input,
+form select{
+    display: block;
+    margin: 12px auto;
+}
+label{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+input, select{
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #f1faee;
+}
+button{
+    background-color: #ffb703;
+    margin: 30px auto;
+    padding: 10px 12px;
+    color: #023047;
+    float: right;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

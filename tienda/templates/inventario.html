@@ -1,0 +1,31 @@
+{% include "layouts/base.html" %}
+{% block content %}
+    <h1>Productos</h1>
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>categoria</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{producto.id_producto}}</td>
+                    <td>{{producto.nombre_producto}}</td>
+                    <td>{{producto.categoria}}</td>
+                    <td>${{producto.precio_unitario}}</td>
+                    <td>{{producto.stock}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <div class="boton">
+        <a href="{% url 'crear_producto' %}">Agregar Producto</a>
+    </div>
+
+{% endblock %}

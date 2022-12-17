@@ -1,0 +1,32 @@
+{% include "layouts/base.html" %}
+{% block content %}
+    <h1>Ventas</h1>
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for venta in ventas %}
+                    <tr>
+                        <td>{{venta.id_factura}}</td>
+                        <td>{{venta.fecha}}</td>
+                        <td>${{venta.total}}</td>
+                        <td>
+                            <div class="boton">
+                                <a href="{% url 'detalle_venta' venta.id_factura %}">Detalle</a>
+                            </div>
+                        </td>
+                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="boton  mg">
+        <a href="{% url 'crear_factura' tipo %}">Nueva venta</a>
+    </div>
+
+{% endblock %}

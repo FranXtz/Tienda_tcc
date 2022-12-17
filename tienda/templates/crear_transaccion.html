@@ -1,0 +1,23 @@
+{% include "layouts/base.html" %}
+{% block content %}
+    <h1>Crear producto</h1>
+
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+            <button>Guardar y agregar otro</button>
+    </form>
+
+    <br>
+    {% if factura.tipoDeTransaccion == 'VENTA' %}
+    <div class="boton">
+        <a href="{% url 'ventas' %}">Regresar</a>
+    </div>
+    {% elif  factura.tipoDeTransaccion == 'COMPRA' %}
+    <div class="boton">
+        <a href="{% url 'compras' %}">Regresar</a>
+    </div>
+    {% endif %}
+
+{% endblock %}

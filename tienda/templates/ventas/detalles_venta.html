@@ -1,0 +1,33 @@
+{% include "layouts/base.html" %}
+{% block content %}
+    <h1>Detalle</h1>
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Codigo de factura</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio unitario</th>
+                <th>Subtotal</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for det in detalle %}
+                <tr>
+                    <td>{{det.id_destallefactura}}</td>
+                    <td>{{det.id_factura.id_factura}}</td>
+                    <td>{{det.id_producto.nombre_producto}}</td>
+                    <td>{{det.cantidad}}</td>
+                    <td>${{det.precio_unitario}}</td>
+                    <td>{{det.subtotal}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="boton">
+        <a href="{% url 'ventas' %}">Regresar</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% include "layouts/base.html" %}
+{% block content %}
+    <h1>Crear producto</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button>Guardar</button>
+    
+    </form>
+
+    <br>
+    <div class="boton">
+        <a href="{% url 'inventario' %}">Regresar</a>        
+    </div>
+
+{% endblock %}
